@@ -1,0 +1,42 @@
+From e39833b5cf8c1422c0320f7685d07938a1da4d5e Mon Sep 17 00:00:00 2001
+From: Vladimir Oltean <olteanv@gmail.com>
+Date: Wed, 3 Sep 2025 21:10:48 +0300
+Subject: [PATCH 1/4] board: solidrun: lx2160acex7: fix printf format warning
+ in setup_fan_ctrl()
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Fixes the following build warning:
+
+board/solidrun/lx2160acex7/lx2160a.c: In function ‘setup_fan_ctrl’:
+board/solidrun/lx2160acex7/lx2160a.c:213:65: warning: unknown conversion type character ‘\x0a’ in format [-Wformat=]
+  213 |                 printf("Fan:   Low 64°C, High 101°C, Slope 1.57%\n");
+      |                                                                 ^~
+
+There is no need to use printf() in fact, replace it with puts().
+
+To be squashed into patch "board: solidrun: lx2160cex7: configure
+fan-controller defaults".
+
+Signed-off-by: Vladimir Oltean <olteanv@gmail.com>
+---
+ board/solidrun/lx2160acex7/lx2160a.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/board/solidrun/lx2160acex7/lx2160a.c b/board/solidrun/lx2160acex7/lx2160a.c
+index 6e12f8687590..5e27966a0890 100644
+--- a/board/solidrun/lx2160acex7/lx2160a.c
++++ b/board/solidrun/lx2160acex7/lx2160a.c
+@@ -210,7 +210,7 @@ static int setup_fan_ctrl(void) {
+ 		if (fanctrl[i].gpio_reg)
+ 			*fanctrl[i].gpio_reg &= ~fanctrl[i].gpio_mask;
+ 
+-		printf("Fan:   Low 64°C, High 101°C, Slope 1.57%\n");
++		puts("Fan:   Low 64°C, High 101°C, Slope 1.57%");
+ 	}
+ 
+ 	return ret;
+-- 
+2.43.0
+
