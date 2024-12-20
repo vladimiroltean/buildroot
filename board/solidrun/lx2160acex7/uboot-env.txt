@@ -13,7 +13,7 @@ boot_prefixes=/ /boot/
 boot_script_dhcp=boot.scr.uimg
 boot_scripts=boot.scr.uimg boot.scr
 boot_syslinux_conf=extlinux/extlinux.conf
-boot_targets=usb0 mmc0 mmc1 scsi0 nvme0 dhcp
+boot_targets=usb0 nvme0 mmc0 mmc1 scsi0 dhcp
 bootargs=console=ttyAMA0,115200 earlycon=pl011,mmio32,0x21c0000 default_hugepagesz=1024m hugepagesz=1024m hugepages=2 pci=pcie_bus_perf cma=256M iommu.passthrough=1 arm-smmu.disable_bypass=0
 bootcmd=run distro_bootcmd
 bootcmd_dhcp=setenv devtype dhcp; run boot_net_usb_start; run boot_pci_enum; if dhcp ${scriptaddr} ${boot_script_dhcp}; then source ${scriptaddr}; fi;setenv efi_fdtfile ${fdtfile}; setenv efi_old_vci ${bootp_vci};setenv efi_old_arch ${bootp_arch};setenv bootp_vci PXEClient:Arch:00011:UNDI:003000;setenv bootp_arch 0xb;if dhcp ${kernel_addr_r}; then tftpboot ${fdt_addr_r} dtb/${efi_fdtfile};if fdt addr ${fdt_addr_r}; then bootefi ${kernel_addr_r} ${fdt_addr_r}; else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi;fi;setenv bootp_vci ${efi_old_vci};setenv bootp_arch ${efi_old_arch};setenv efi_fdtfile;setenv efi_old_arch;setenv efi_old_vci;
