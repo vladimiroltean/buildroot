@@ -1,0 +1,670 @@
+/dts-v1/;
+
+/ {
+	dpl-version = <0x0a>;
+
+	containers {
+
+		dprc@1 {
+			compatible = "fsl,dprc";
+			parent = "none";
+			options = "DPRC_CFG_OPT_SPAWN_ALLOWED\0DPRC_CFG_OPT_ALLOC_ALLOWED\0DPRC_CFG_OPT_OBJ_CREATE_ALLOWED\0DPRC_CFG_OPT_TOPOLOGY_CHANGES_ALLOWED\0DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
+
+			objects {
+
+				obj_set@dpbp {
+					type = "dpbp";
+					ids = <0x00 0x01 0x02>;
+				};
+
+				obj_set@dpcon {
+					type = "dpcon";
+					ids = <0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x0b 0x0c 0x0d 0x0e 0x0f 0x10 0x11 0x12 0x13 0x14 0x15 0x16 0x17 0x18 0x19 0x1a 0x1b 0x1c 0x1d 0x1e 0x1f>;
+				};
+
+				obj_set@dpio {
+					type = "dpio";
+					ids = <0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x0b 0x0c 0x0d 0x0e 0x0f>;
+				};
+
+				obj_set@dpmac {
+					type = "dpmac";
+					ids = <0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x11>;
+				};
+
+				obj_set@dpmcp {
+					type = "dpmcp";
+					ids = <0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x0b 0x0c 0x0d 0x0e 0x0f 0x10 0x11 0x12 0x13 0x14 0x15 0x16 0x17 0x18 0x19 0x1a 0x1b 0x1c 0x1d 0x1e 0x1f 0x20 0x21 0x22 0x23 0x24 0x25 0x26 0x27 0x28 0x29 0x2a 0x2b 0x2c 0x2d 0x2e 0x2f 0x30 0x31 0x32 0x33 0x34 0x35 0x36>;
+				};
+
+				obj_set@dpni {
+					type = "dpni";
+					ids = <0x00 0x01>;
+				};
+
+				obj_set@dprtc {
+					type = "dprtc";
+					ids = <0x00>;
+				};
+
+				obj_set@dpseci {
+					type = "dpseci";
+					ids = <0x00>;
+				};
+
+				obj_set@dpsw {
+					type = "dpsw";
+					ids = <0x00>;
+				};
+			};
+		};
+	};
+
+	objects {
+
+		dpbp@0 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@1 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@2 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpcon@0 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@1 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@2 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@3 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@4 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@5 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@6 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@7 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@8 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@9 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@10 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@11 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@12 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@13 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@14 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@15 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@16 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@17 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@18 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@19 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@20 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@21 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@22 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@23 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@24 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@25 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@26 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@27 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@28 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@29 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@30 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpcon@31 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x02>;
+		};
+
+		dpio@0 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@1 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@2 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@3 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@4 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@5 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@6 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@7 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@8 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@9 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@10 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@11 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@12 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@13 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@14 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpio@15 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x08>;
+		};
+
+		dpmac@3 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@4 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@5 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@6 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@7 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@8 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@9 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@10 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmac@17 {
+			compatible = "fsl,dpmac";
+		};
+
+		dpmcp@1 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@2 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@3 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@4 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@5 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@6 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@7 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@8 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@9 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@10 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@11 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@12 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@13 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@14 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@15 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@16 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@17 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@18 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@19 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@20 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@21 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@22 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@23 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@24 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@25 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@26 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@27 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@28 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@29 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@30 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@31 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@32 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@33 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@34 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@35 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@36 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@37 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@38 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@39 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@40 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@41 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@42 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@43 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@44 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@45 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@46 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@47 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@48 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@49 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@50 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@51 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@52 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@53 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpmcp@54 {
+			compatible = "fsl,dpmcp";
+		};
+
+		dpni@0 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			num_queues = <0x10>;
+			num_tcs = <0x01>;
+			num_cgs = <0x01>;
+			mac_filter_entries = <0x10>;
+			vlan_filter_entries = <0x00>;
+			fs_entries = <0x40>;
+			qos_entries = <0x00>;
+			dist_key_size = <0x38>;
+			num_channels = <0x01>;
+			num_opr = <0x00>;
+		};
+
+		dpni@1 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			num_queues = <0x10>;
+			num_tcs = <0x01>;
+			num_cgs = <0x01>;
+			mac_filter_entries = <0x10>;
+			vlan_filter_entries = <0x00>;
+			fs_entries = <0x40>;
+			qos_entries = <0x00>;
+			dist_key_size = <0x38>;
+			num_channels = <0x01>;
+			num_opr = <0x00>;
+		};
+
+		dprtc@0 {
+			compatible = "fsl,dprtc";
+		};
+
+		dpseci@0 {
+			compatible = "fsl,dpseci";
+			priorities = <0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01>;
+		};
+
+		dpsw@0 {
+			compatible = "fsl,dpsw";
+			max_vlans = <0x10>;
+			max_fdbs = <0x05>;
+			num_fdb_entries = <0x400>;
+			fdb_aging_time = <0x12c>;
+			num_ifs = <0x05>;
+			max_fdb_mc_groups = <0x20>;
+			max_meters_per_if = <0x04>;
+			flooding_cfg = "DPSW_FLOODING_PER_FDB";
+			broadcast_cfg = "DPSW_BROADCAST_PER_FDB";
+		};
+	};
+
+	connections {
+
+		connection@1 {
+			endpoint1 = "dpni@0";
+			endpoint2 = "dpmac@17";
+		};
+
+		connection@2 {
+			endpoint1 = "dpni@1";
+			endpoint2 = "dpsw@0/if@4";
+		};
+
+		connection@3 {
+			endpoint1 = "dpsw@0/if@0";
+			endpoint2 = "dpmac@7";
+		};
+
+		connection@4 {
+			endpoint1 = "dpsw@0/if@1";
+			endpoint2 = "dpmac@8";
+		};
+
+		connection@5 {
+			endpoint1 = "dpsw@0/if@2";
+			endpoint2 = "dpmac@9";
+		};
+
+		connection@6 {
+			endpoint1 = "dpsw@0/if@3";
+			endpoint2 = "dpmac@10";
+		};
+	};
+};
