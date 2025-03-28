@@ -69,8 +69,9 @@ config BR2_PACKAGE_QORIQ_MC_UTILS_TARGET_INSTALL_PATH
 	string "Path on target to install DPL and DPC files"
 	help
 	  The DPL and DPC files can optionally be deployed to
-	  the target at the path specified here. This is useful
-	  if the mcinitcmd U-Boot environment variable is
-	  configured to apply the DPL and DPC from the filesystem.
+	  the target filesystem at the path specified here.
+	  This is useful if the mcinitcmd U-Boot environment
+	  variable is configured to apply the DPL and DPC from
+	  the filesystem.
 
 endif
