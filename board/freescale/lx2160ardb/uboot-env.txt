@@ -1,0 +1,36 @@
+BOARD=lx2160ardb
+arch=arm
+baudrate=115200
+board=lx2160a
+board_name=lx2160a
+boot_script_dhcp=boot.scr.uimg
+boot_script_hdr=hdr_lx2160ardb_bs.out
+boot_scripts=lx2160ardb_boot.scr
+boot_targets=usb0 mmc0 mmc1 scsi0 dhcp
+bootargs=console=ttyAMA0,115200 root=/dev/ram0 earlycon=pl011,mmio32,0x21c0000 ramdisk_size=0x2000000 default_hugepagesz=1024m hugepagesz=1024m hugepages=2 pci=pcie_bus_perf
+cpu=armv8
+ethprime=DPMAC1@xgmii
+fdt_addr=0x90000000
+fdt_addr_r=0x90000000
+fdt_high=0xa0000000
+fdtheader_addr_r=0x80100000
+hwconfig=fsl_ddr:bank_intlv=auto
+initrd_high=0xffffffffffffffff
+kernel_addr_r=0x81000000
+kernel_addr_sd=0x8000
+kernel_size=0x2800000
+kernel_size_sd=0x14000
+kernel_start=0x1000000
+kernelhdr_addr_sd=0x3000
+kernelhdr_size_sd=0x20
+kernelheader_addr_r=0x80200000
+kernelheader_size=0x40000
+kernelheader_start=0x600000
+load_addr=0xa0000000
+loadaddr=0x90000000
+ramdisk_addr=0x800000
+ramdisk_size=0x2000000
+scriptaddr=0x80000000
+scripthdraddr=0x80080000
+soc=fsl-layerscape
+vendor=freescale
