@@ -43,7 +43,7 @@ BR2_PACKAGE_HOST_QORIQ_RCW_CUSTOM_PATH="board/freescale/lx2160ardb/rcw_2200_750_
 BR2_PACKAGE_HOST_UBOOT_TOOLS=y
 BR2_PACKAGE_HOST_UBOOT_TOOLS_ENVIMAGE=y
 # Obtained from "env default -a" plus a custom mcinitcmd
-BR2_PACKAGE_HOST_UBOOT_TOOLS_ENVIMAGE_SOURCE="board/freescale/lx2160ardb/uboot-env.txt"
+BR2_PACKAGE_HOST_UBOOT_TOOLS_ENVIMAGE_SOURCE="board/freescale/lx2160ardb/uboot-env.txt board/freescale/lx2160ardb/env-distro-boot.txt board/freescale/lx2160ardb/env-dpaa2.txt"
 BR2_PACKAGE_HOST_UBOOT_TOOLS_ENVIMAGE_SIZE="0x2000"
 BR2_PACKAGE_QORIQ_DDR_PHY_BINARY=y
 BR2_PACKAGE_QORIQ_MC_BINARY=y

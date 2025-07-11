@@ -1,0 +1,7 @@
+dpl_addr_r=0x80d00000
+dpc_addr_r=0x80e00000
+fsl_bootcmd_mcinitcmd_set=y
+mc_fw_addr_r=0x80a00000
+mcinitcmd=mmc dev 0 && load mmc 0:1 $mc_fw_addr_r /boot/mc.itb && load mmc 0:1 $dpc_addr_r /boot/dpc.dtb && load mmc 0:1 $dpl_addr_r /boot/dpl.dtb && fsl_mc start mc $mc_fw_addr_r $dpc_addr_r && fsl_mc lazyapply dpl $dpl_addr_r
+mcmemsize=0x70000000
+mcmemsize=0x70000000
