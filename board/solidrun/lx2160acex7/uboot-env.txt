@@ -5,7 +5,7 @@ board=lx2160a
 board_name=lx2160a
 boot_script_dhcp=boot.scr.uimg
 boot_scripts=boot.scr.uimg boot.scr
-boot_targets=usb0 mmc0 mmc1 scsi0 nvme0 dhcp
+boot_targets=usb0 nvme0 mmc0 mmc1 scsi0 dhcp
 bootargs=console=ttyAMA0,115200 earlycon=pl011,mmio32,0x21c0000 default_hugepagesz=1024m hugepagesz=1024m hugepages=2 pci=pcie_bus_perf cma=256M iommu.passthrough=1 arm-smmu.disable_bypass=0
 console=ttyAMA0,115200
 cpu=armv8
